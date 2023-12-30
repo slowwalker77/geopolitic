@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": "src/app", // 기본 디렉토리를 "src/app"으로 설정합니다.
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["*"]
     }
   }
 }

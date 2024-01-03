@@ -17,11 +17,16 @@ const BlogItem = ({ blog, isExpanded, onToggle }) => {
 
 return (
 <div className="ml-8 mr-8 pb-2 pt-2">
-<div className="flex space-y-4">
+<div className="flex ">
   {/* 제목 */}
-  <h2 className="text-blue-900 text-lg md:text-xl space-y-4 lg:text-2xl font-bold">
-  {blog.title}<span className="text-sm  md:text-ms lg:text-lg">({formattedDate})</span>
-</h2>
+  <h2 className="text-blue-900 space-y-4 text-ms md:text-lg lg:text-xl font-bold">
+    {blog.title}({formattedDate})
+  </h2>
+
+    <button onClick={onToggle} className="text-orange-800 space-y-4  text-xs md:text-lg lg:text-xl">
+      {isExpanded ? '[접기]' : '[전문보기]'}
+    </button>
+
 </div>
 
       {JSON.parse(blog.json_metadata).image && (
@@ -41,15 +46,11 @@ return (
       dangerouslySetInnerHTML={{ __html: htmlContent }}
     />      ) : (
 <p className="text-lg md:text-base lg:text-lg" onClick={onToggle} style={{ cursor: 'pointer' }}>
-          {blog.body.substring(0, 200)}...
+          {blog.body.substring(0, 300)}...
         </p>
       )}
   {/* 버튼 */}
-  <div className="flex justify-end">
-    <button onClick={onToggle} className="text-orange-800 text-ms md:text-ms lg:text-ms">
-      {isExpanded ? '[접기]' : '[전문]'}
-    </button>
-  </div>
+
     </div>
   );
 };

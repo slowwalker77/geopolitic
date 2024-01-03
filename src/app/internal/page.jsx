@@ -114,7 +114,7 @@ export default function BlogList() {
 
   return (
     <section>
-      <h2 className="text-orange-800 text-xl font-extrabold ml-10 mt-5 mb-2">국내정치</h2>
+      <h2 className="text-orange-800 text-xl font-extrabold ml-10 mt-5 mb-2">참고자료</h2>
       <div>
       {blogs.map((blog, index) => (
         <BlogItem

@@ -2,6 +2,7 @@
 import React, { useState, useCallback } from 'react';
 import classNames from 'classnames';
 
+
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
 
@@ -9,7 +10,8 @@ const Navbar = () => {
     const toggleMenu = useCallback(() => {
       setMenuToggle(prevMenuToggle => !prevMenuToggle);
     }, []); // 의존성 배열은 이 경우 비어있습니다.
-  
+
+
 
   return (
     <nav className="bg-gray-200">
